@@ -14,7 +14,13 @@ export const savevault = {
     focus: ['Metadata extraction', 'Image handling', 'Product data'],
     status: 'Built — further improvements planned',
     timeline: '2025 — 2026',
-    image: null,
+    image: {
+        src: '/images/projects/savevault/savevault-collection.webp',
+        alt: 'SaveVault All Items page with search, filters, and a grid of saved products.',
+        caption: 'The collection: search, filters, and saved product cards.',
+        width: 1707,
+        height: 1307,
+    },
     imageLabel: 'A screenshot of the SaveVault wishlist is not in the portfolio yet.',
     sections: [
         {
@@ -37,6 +43,28 @@ export const savevault = {
                 'You paste a link. SaveVault accepts it and finishes the work in the background. It retrieves the page in a way that fits the retailer, reads the product information available there, and enriches secondary details.',
                 'The item is saved into the collection. You can browse it, filter it, and edit it afterward.',
             ],
+        },
+        {
+            type: 'image',
+            id: 'product-details',
+            title: 'A saved product',
+            src: '/images/projects/savevault/savevault-product-details.webp',
+            alt: 'SaveVault product page for a Lenovo Yoga Book, showing its photo, price, description, brand, and edit controls.',
+            caption: 'Saved products bring together source information, structured details, and personal organization tools.',
+            layout: 'wide',
+            width: 1707,
+            height: 1402,
+        },
+        {
+            type: 'image',
+            id: 'capture',
+            title: 'Capturing a link',
+            src: '/images/projects/savevault/savevault-inbox.webp',
+            alt: 'SaveVault Inbox with a URL field and three earlier submissions marked Processed.',
+            caption: 'Paste a product URL to begin extracting and organizing its information.',
+            layout: 'wide',
+            width: 1814,
+            height: 1081,
         },
         {
             type: 'workflow',

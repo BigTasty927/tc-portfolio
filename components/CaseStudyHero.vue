@@ -23,9 +23,7 @@
         <dd>{{ study.timeline }}</dd>
       </div>
     </dl>
-    <figure v-if="study.image" class="case-figure">
-      <img :src="study.image.src" :alt="study.image.alt">
-    </figure>
+    <CaseStudyFigure v-if="study.image" :image="study.image" eager/>
     <figure v-else class="case-figure case-figure--empty">
       <figcaption>
         <span class="eyebrow">Image needed</span>

@@ -14,6 +14,16 @@
             :section="section"
             :index-label="label(index)"
         />
+        <CaseStudyImage
+            v-else-if="section.type === 'image'"
+            :section="section"
+            :index-label="label(index)"
+        />
+        <CaseStudyGallery
+            v-else-if="section.type === 'gallery'"
+            :section="section"
+            :index-label="label(index)"
+        />
         <section v-else class="case-section" :aria-labelledby="section.id">
           <p class="eyebrow">{{ label(index) }}</p>
           <h2 :id="section.id">{{ section.title }}</h2>

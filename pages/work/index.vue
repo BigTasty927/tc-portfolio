@@ -3,7 +3,7 @@
     <header class="page-intro container">
       <p class="eyebrow">Work</p>
       <h1>Work</h1>
-      <p class="lede">SaveVault has a case study. The other projects are listed until their pages are written.</p>
+      <p class="lede">SaveVault and Blackbox Command Center have case studies. The other projects are listed until their pages are written.</p>
     </header>
     <section class="section container" aria-label="Projects">
       <div class="card-grid">
@@ -18,6 +18,6 @@ import {projects} from '~/content/projects'
 
 useSeoMeta({
   title: 'Work',
-  description: 'Projects by Thomas Clarke, including the SaveVault case study.',
+  description: 'Projects by Thomas Clarke, including case studies for SaveVault and Blackbox Command Center.',
 })
 </script>

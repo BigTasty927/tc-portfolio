@@ -94,5 +94,15 @@ useSeoMeta({
     description: `${study.tagline} ${study.summary}`,
 })
 
-const label = (index) => String(index + 1).padStart(2, '0')
+const showsIndex = (section) => {
+    if (section.type === 'image' || section.type === 'gallery') {
+        return Boolean(section.title || section.heading)
+    }
+    return true
+}
+
+const label = (index) => {
+    const count = study.sections.slice(0, index + 1).filter(showsIndex).length
+    return String(count).padStart(2, '0')
+}
 </script>

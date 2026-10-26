@@ -1,7 +1,8 @@
 import {projects} from '../projects.js'
 import {savevault} from './savevault.js'
+import {blackboxCommandCenter} from './blackbox-command-center.js'
 
-const studies = [savevault]
+const studies = [savevault, blackboxCommandCenter]
 
 export const caseStudiesBySlug = Object.fromEntries(studies.map((study) => [study.slug, study]))
 

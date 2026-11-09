@@ -31,6 +31,12 @@
           <div v-if="section.paragraphs" class="prose">
             <p v-for="(paragraph, paragraphIndex) in section.paragraphs" :key="paragraphIndex">{{ paragraph }}</p>
           </div>
+          <ul v-if="section.images?.length > 1" class="case-gallery">
+            <li v-for="image in section.images" :key="image.src">
+              <CaseStudyFigure :image="image"/>
+            </li>
+          </ul>
+          <CaseStudyFigure v-else-if="section.images?.length === 1" :image="section.images[0]"/>
           <div v-if="section.type === 'technologies' && section.groups" class="tech-groups">
             <section v-for="group in section.groups" :key="group.title" class="tech-group">
               <h3>{{ group.title }}</h3>
@@ -54,9 +60,9 @@
               </ul>
             </section>
           </div>
-          <div v-if="section.type === 'links' && section.links.length" class="actions">
+          <div v-if="section.type === 'links' && visibleLinks(section).length" class="actions">
             <a
-                v-for="link in section.links"
+                v-for="link in visibleLinks(section)"
                 :key="link.href"
                 class="button"
                 :href="link.href"
@@ -91,8 +97,10 @@ const {previous, next} = getCaseStudyNeighbors(study.slug)
 
 useSeoMeta({
     title: study.name,
-    description: `${study.tagline} ${study.summary}`,
+    description: study.description || `${study.tagline} ${study.summary}`,
 })
+
+const visibleLinks = (section) => (section.links || []).filter((link) => link.enabled !== false)
 
 const showsIndex = (section) => {
     if (section.type === 'image' || section.type === 'gallery') {

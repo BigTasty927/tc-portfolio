@@ -134,7 +134,7 @@ export const blackboxCommandCenter = {
             groups: [
                 {title: 'Interface', items: ['Next.js', 'React', 'Tailwind']},
                 {title: 'Records', items: ['Git', 'JSON', 'Markdown', 'GitHub API']},
-                {title: 'Integrations', items: ['OpenAI', 'n8n', 'Supabase', 'Vercel']},
+                {title: 'Integrations', items: ['OpenAI', 'n8n', 'Neon Postgres', 'Vercel']},
             ],
         },
     ],
